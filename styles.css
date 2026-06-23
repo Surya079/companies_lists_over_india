@@ -1,0 +1,370 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #eff3f8;
+  color: #15202b;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(29, 78, 216, 0.12), transparent 38%),
+    linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.page-shell {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.page-header {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  max-width: 620px;
+}
+
+.page-copy {
+  margin: 0.75rem 0 0;
+  color: #475569;
+  max-width: 660px;
+}
+
+.summary-card {
+  min-width: 140px;
+  border-radius: 24px;
+  padding: 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  text-align: right;
+}
+
+.summary-card span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.summary-card small {
+  color: #64748b;
+}
+
+.controls-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 1.5rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.control-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+select,
+input[type="search"] {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  background: white;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+select:focus,
+input[type="search"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+.list-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.company-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.35rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+.company-card header {
+  display: grid;
+  gap: 1rem;
+}
+
+.company-info {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.company-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.company-meta .badge {
+  font-size: 0.9rem;
+}
+
+.status-select {
+  appearance: none;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 999px;
+  color: #3730a3;
+  font-weight: 700;
+  padding: 0.55rem 0.9rem;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+.status-select.applied {
+  background: #dcfce7;
+  border-color: #4ade80;
+  color: #166534;
+}
+
+.status-select.pending {
+  background: #fef3c7;
+  border-color: #fbbf24;
+  color: #92400e;
+}
+
+.status-select.offered {
+  background: #dbeafe;
+  border-color: #60a5fa;
+  color: #1d4ed8;
+}
+
+.status-select.rejected {
+  background: #fee2e2;
+  border-color: #f87171;
+  color: #991b1b;
+}
+
+.status-select option {
+  font-weight: 600;
+}
+
+.company-card .company-description {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.company-card .company-description p {
+  margin: 0;
+}
+
+.company-card .company-description a {
+  display: inline-block;
+  color: #2563eb;
+}
+
+.company-card .company-description a:hover {
+  text-decoration: underline;
+}
+
+.company-name {
+  margin: 0;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.badge,
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.badge {
+  background: #e0f2fe;
+  color: #0c4a6e;
+}
+
+.status-badge {
+  background: #f5f3ff;
+  color: #5b21b6;
+}
+
+.status-badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.paused {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.closed {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.contact-list {
+  display: grid;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  color: #475569;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.contact-list li span:last-child {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.company-description {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.company-description p {
+  margin: 0;
+  color: #64748b;
+}
+
+.company-description a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.company-description a:hover {
+  text-decoration: underline;
+}
+
+.pagination-shell {
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.page-button {
+  min-width: 110px;
+  border: none;
+  border-radius: 14px;
+  padding: 0.95rem 1.15rem;
+  background: #1d4ed8;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.page-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.page-button:not(:disabled):hover {
+  background: #2563eb;
+}
+
+.page-info {
+  display: flex;
+  gap: 0.4rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .page-header {
+    grid-template-columns: 1fr;
+  }
+
+  .company-card {
+    padding: 1.15rem;
+  }
+}
+
+.status-message,
+.empty-state {
+  margin: 1rem 0;
+  padding: 1rem 1.15rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #334155;
+  font-size: 0.98rem;
+  text-align: center;
+}
+
+.empty-state {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+}

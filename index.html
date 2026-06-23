@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company List with Pagination</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Company directory</p>
+          <h1>Impact Analytics &amp; Company Explorer</h1>
+          <p class="page-copy">
+            Browse companies with quick status, score, location, and pagination
+            support.
+          </p>
+        </div>
+        <div class="summary-card">
+          <span id="totalCount">0</span>
+          <small>companies loaded</small>
+        </div>
+      </header>
+
+      <section class="controls-row">
+        <div class="control-group">
+          <label for="pageSize">Items per page</label>
+          <select id="pageSize">
+            <option value="8">8</option>
+            <option value="12" selected>12</option>
+            <option value="16">16</option>
+            <option value="24">24</option>
+          </select>
+        </div>
+        <div class="control-group search-group">
+          <label for="searchInput">Search location</label>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search by city or state" />
+        </div>
+      </section>
+
+      <div id="statusMessage" class="status-message">Loading companies…</div>
+      <section class="list-grid" id="companyList"></section>
+
+      <nav class="pagination-shell" aria-label="Pagination">
+        <button id="prevPage" class="page-button" type="button">
+          Previous
+        </button>
+        <div class="page-info">
+          <span id="currentPage">1</span>
+          <span>of</span>
+          <span id="totalPages">1</span>
+        </div>
+        <button id="nextPage" class="page-button" type="button">Next</button>
+      </nav>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
